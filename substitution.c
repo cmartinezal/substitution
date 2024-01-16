@@ -4,7 +4,7 @@
 #include <string.h>
 
 bool is_valid_key(string key);
-string encript(string text, string key);
+string encrypt(string text, string key);
 
 int main(int argc, string argv[])
 {
@@ -22,8 +22,8 @@ int main(int argc, string argv[])
     }
 
     string text = get_string("plaintext: ");
-    string cyphertext = encript(text, key);
-    printf("ciphertext: %s\n", cyphertext);
+    string ciphertext = encrypt(text, key);
+    printf("ciphertext: %s\n", ciphertext);
     return 0;
 }
 
@@ -54,7 +54,7 @@ bool is_valid_key(string key)
     return true;
 }
 
-string encript(string text, string key)
+string encrypt(string text, string key)
 {
 
     for (int i = 0; i < strlen(text); i++)
